@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class Square extends Figure {
     private int side;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Square() {
         Random random = new Random();
         this.side = random.nextInt(1, 10);
-        this.color = ColorSupplier.getRandomColor();
+        this.color = colorSupplier.getRandomColor();
     }
 
     public Square(int side, String color) {

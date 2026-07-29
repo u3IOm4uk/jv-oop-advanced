@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    public static Figure getDefaultFigure() {
-        return new Circle(10, ColorSupplier.getRandomColor());
+    public Figure getDefaultFigure() {
+        return new Circle(10, "White");
     }
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         Random random = new Random();
         int typeFigure = random.nextInt(5);
         switch (typeFigure) {

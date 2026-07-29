@@ -5,12 +5,13 @@ import java.util.Random;
 public class Rectangle extends Figure {
     private int width;
     private int height;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Rectangle() {
         Random random = new Random();
         this.width = random.nextInt(1, 10);
         this.height = random.nextInt(1, 10);
-        this.color = ColorSupplier.getRandomColor();
+        this.color = colorSupplier.getRandomColor();
     }
 
     public Rectangle(int sideA, int width, int height, String color) {

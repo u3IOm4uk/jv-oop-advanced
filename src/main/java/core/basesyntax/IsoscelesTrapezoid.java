@@ -6,13 +6,14 @@ public class IsoscelesTrapezoid extends Figure {
     private int topSide;
     private int bottomSide;
     private int height;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public IsoscelesTrapezoid() {
         Random random = new Random();
         this.bottomSide = random.nextInt(1, 10);
         this.topSide = random.nextInt(1, 10);
         this.height = random.nextInt(1, 10);
-        this.color = ColorSupplier.getRandomColor();
+        this.color = colorSupplier.getRandomColor();
     }
 
     public IsoscelesTrapezoid(int topSide, int bottomSide, int leg, String color) {
@@ -24,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return (double) ((topSide * bottomSide) / 2) * height;
+        return (double) ((topSide + bottomSide) / 2) * height;
     }
 
     @Override
