@@ -4,13 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+    private static final int FIGURE_COUNT = 5;
 
     public Figure getDefaultFigure() {
         return new Circle(10, "White");
     }
 
     public Figure getRandomFigure() {
-        int typeFigure = random.nextInt(5);
+        int typeFigure = random.nextInt(FIGURE_COUNT);
         switch (typeFigure) {
             case 0:
                 return new Square();
