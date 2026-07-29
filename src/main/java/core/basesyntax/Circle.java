@@ -23,7 +23,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + this.getArea()
+        System.out.println("Figure: circle, area: " + this.getArea()
                 + " sq. units, radius: " + this.radius
                 + " units, color: " + this.color);
     }
