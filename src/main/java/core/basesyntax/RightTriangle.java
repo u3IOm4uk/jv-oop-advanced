@@ -3,15 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RightTriangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final int firstLeg;
+    private final int secondLeg;
 
     public RightTriangle() {
         Random random = new Random();
         this.firstLeg = random.nextInt(1, 10);
         this.secondLeg = random.nextInt(1, 10);
-        this.color = colorSupplier.getRandomColor();
+        this.color = new ColorSupplier().getRandomColor();
     }
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
@@ -27,7 +26,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(" Figure: triangle, area: " + this.getArea()
+        System.out.println("Figure: triangle, area: " + this.getArea()
                 + " sq. units, sideA: " + this.firstLeg
                 + " units, sideB: " + this.secondLeg
                 + " units, color: " + this.color);

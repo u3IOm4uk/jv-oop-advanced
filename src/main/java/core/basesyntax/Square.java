@@ -3,13 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Square extends Figure {
-    private int side;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final int side;
 
     public Square() {
         Random random = new Random();
         this.side = random.nextInt(1, 10);
-        this.color = colorSupplier.getRandomColor();
+        this.color = new ColorSupplier().getRandomColor();
     }
 
     public Square(int side, String color) {
@@ -24,7 +23,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(" Figure: square, area: " + this.getArea()
+        System.out.println("Figure: square, area: " + this.getArea()
                 + " sq. units, side: " + this.side
                 + " units, color: " + this.color);
     }

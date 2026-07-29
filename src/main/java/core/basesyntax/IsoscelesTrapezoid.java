@@ -3,17 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int topSide;
-    private int bottomSide;
-    private int height;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final int topSide;
+    private final int bottomSide;
+    private final int height;
 
     public IsoscelesTrapezoid() {
         Random random = new Random();
         this.bottomSide = random.nextInt(1, 10);
         this.topSide = random.nextInt(1, 10);
         this.height = random.nextInt(1, 10);
-        this.color = colorSupplier.getRandomColor();
+        this.color = new ColorSupplier().getRandomColor();
     }
 
     public IsoscelesTrapezoid(int topSide, int bottomSide, int leg, String color) {
@@ -30,7 +29,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(" Figure: isoscelesTrapezoid, area: " + this.getArea()
+        System.out.println("Figure: isoscelesTrapezoid, area: " + this.getArea()
                 + " sq. units, topSide: " + this.topSide
                 + " units, bottomSide: " + this.bottomSide
                 + " units, height: " + this.height

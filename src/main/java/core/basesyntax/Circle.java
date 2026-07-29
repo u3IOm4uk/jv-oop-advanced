@@ -3,13 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Circle extends Figure {
-    private int radius;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final int radius;
 
     public Circle() {
         Random random = new Random();
         this.radius = random.nextInt(1, 10);
-        this.color = colorSupplier.getRandomColor();
+        this.color = new ColorSupplier().getRandomColor();
     }
 
     public Circle(int radius, String color) {
@@ -24,7 +23,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(" Figure: Circle, area: " + this.getArea()
+        System.out.println("Figure: Circle, area: " + this.getArea()
                 + " sq. units, radius: " + this.radius
                 + " units, color: " + this.color);
     }
