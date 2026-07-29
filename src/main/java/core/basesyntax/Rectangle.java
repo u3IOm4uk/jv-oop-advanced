@@ -5,7 +5,7 @@ import java.util.Random;
 public class Rectangle extends Figure {
     private int width;
     private int height;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Rectangle() {
         Random random = new Random();
@@ -14,7 +14,7 @@ public class Rectangle extends Figure {
         this.color = colorSupplier.getRandomColor();
     }
 
-    public Rectangle(int sideA, int width, int height, String color) {
+    public Rectangle(int width, int height, String color) {
         this.width = width;
         this.height = height;
         this.color = color;

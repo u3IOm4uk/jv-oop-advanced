@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Circle extends Figure {
     private int radius;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Circle() {
         Random random = new Random();

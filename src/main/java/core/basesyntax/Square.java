@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Square extends Figure {
     private int side;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Square() {
         Random random = new Random();

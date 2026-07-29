@@ -5,7 +5,7 @@ import java.util.Random;
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public RightTriangle() {
         Random random = new Random();
