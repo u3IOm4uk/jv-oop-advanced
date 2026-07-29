@@ -22,7 +22,8 @@ public class FigureSupplier {
                 return new Rectangle();
             case 4:
                 return new RightTriangle();
+            default:
+                return getDefaultFigure();
         }
-        return getDefaultFigure();
     }
 }
