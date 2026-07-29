@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
     private static final int FIGURE_COUNT = 5;
+    private final Random random = new Random();
 
     public Figure getDefaultFigure() {
         return new Circle(10, "White");
