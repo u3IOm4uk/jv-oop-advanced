@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
 
     public Figure getDefaultFigure() {
         return new Circle(10, "White");
     }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int typeFigure = random.nextInt(5);
         switch (typeFigure) {
             case 0:
@@ -26,4 +26,6 @@ public class FigureSupplier {
                 return getDefaultFigure();
         }
     }
+
+
 }
